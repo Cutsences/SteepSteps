@@ -1,1 +1,178 @@
-local v0={"i think this game might be broken","tell bob to help me","i cannot turn my head","call 911 for, oh wait...","man, i have to be like this forever?!","room 60 is 59 more doors away.","HAHA","ask the devs if you are seeing this.","i wish i can give BOB a note, i have something really important to tell him!","Keep this a secret plz","DONT TIP JEFF AT ALL"};local v1=game:GetObjects("rbxassetid://12698183287")[1263 -(232 + 1030) ];v1.Parent=game.Workspace;local v4=game:GetService("Workspace")["52"].ShopStuff.RadioShop.InteractPrompt;local v5=false;local function v6()if (v5==false) then local v33=math.random(1 -0 , #v0);game:GetService("Workspace")["52"]["El Goblino"].Head.ChatUI.Enabled=true;game:GetService("Workspace")["52"]["El Goblino"].Head.ChatUI.ChatFrame.ChatText.Text=v0[v33];v5=true;end end local v7=game:GetService("Players").LocalPlayer.PlayerGui.MainUI.MainFrame.Caption;local v8=game.Workspace["52"].ShopStuff;local v9=game.Workspace["52"].ShopStuff.PurchasableItem2.Crucifix.ModulePrompt;local v10=game.Workspace["52"].ShopStuff.PurchasableItem3.Vitamins.ModulePrompt;local v11=game.Workspace["52"].ShopStuff.PurchasableItem4.Lighter.ModulePrompt;local v12=game:GetService("Workspace")["52"]["El Goblino"].DialoguePrompt;local v13=game:GetService("Workspace")["52"].SkellyFriend.InteractPrompt;for v17,v18 in pairs(game:GetService("Workspace")["52"].Parts:GetDescendants()) do if v18:IsA("UnionOperation") then v18.CanCollide=false;end end local v14=game.Players.LocalPlayer.Backpack;local function v15()local v19=0;local v20;while true do if (v19==(0 + 0)) then v20=Instance.new("LocalScript",v9);v9.Triggered:Connect(function()local v38=game:GetObjects("rbxassetid://11475043261")[1];v38.Parent=v14;end);break;end end end coroutine.wrap(v15)();local function v15()local v21=Instance.new("LocalScript",v11);v11.Triggered:Connect(function()local v29=0;local v30;while true do if (v29==(0 -0)) then v30=game:GetObjects("rbxassetid://11621132127")[1];v30.Parent=v14;break;end end end);end coroutine.wrap(v15)();local function v15()local v22=Instance.new("LocalScript",v10);v10.Triggered:Connect(function()local v31=game:GetObjects("rbxassetid://11673189752")[682 -(184 + 497) ];v31.Parent=v14;end);end coroutine.wrap(v15)();local function v15()local v23=0 -0 ;local v24;while true do if (v23==0) then v24=Instance.new("LocalScript",v4);v4.Triggered:Connect(function()v7.Visible=true;v7.Text="Twisting and turning the knobs seem to do nothing...";wait(3 + 1 );v7.Visible=false;end);break;end end end coroutine.wrap(v15)();local function v15()local v25=545 -(233 + 312) ;local v26;while true do if (v25==(0 -0)) then v26=Instance.new("LocalScript",v12);v12.Triggered:Connect(function()if (v5==false) then local v46=0 + 0 ;while true do if (v46==(132 -(45 + 86))) then game:GetService("Workspace")["52"]["El Goblino"].Head.ChatUI.Enabled=false;v5=false;break;end if (v46==(0 -0)) then v6();wait(5);v46=1 + 0 ;end end end end);break;end end end coroutine.wrap(v15)();local function v15()local v27=0 + 0 ;local v28;while true do if (v27==(0 -0)) then v28=Instance.new("LocalScript",v13);v13.Triggered:Connect(function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Cutsences/SteepSteps/main/CrucifixEffect"))();v7.Visible=true;v7.Text="Bob gave you a tool...";wait(4 + 0 );v7.Visible=false;end);break;end end end coroutine.wrap(v15)();local v16=game.Workspace.CurrentRooms["1"];v16.Assets:Destroy();v16.Colors:Destroy();v16.Parts:Destroy();v16.PathfindNodes:Destroy();
+local words = {"i think this game might be broken", "tell bob to help me", "i cannot turn my head", "call 911 for, oh wait...", "man, i have to be like this forever?!", "room 60 is 59 more doors away.", "HAHA", "ask the devs if you are seeing this.", "i wish i can give BOB a note, i have something really important to tell him!", "Keep this a secret plz", "DONT TIP JEFF AT ALL"}
+
+-- Jeff shop generation :D
+
+local Item = game:GetObjects("rbxassetid://12698183287")[1]
+Item.Parent = game.Workspace
+
+-- Varaibles
+-- Define the proximity prompt
+local proximityPrompt = game:GetService("Workspace")["52"].ShopStuff.RadioShop.InteractPrompt
+
+local hmmm = false
+
+local function DEMON2()
+    if hmmm == false then
+    local index = math.random(1, #words) -- Choose a random index between 1 and the number of words in the array
+  game:GetService("Workspace")["52"]["El Goblino"].Head.ChatUI.Enabled = true
+
+    game:GetService("Workspace")["52"]["El Goblino"].Head.ChatUI.ChatFrame.ChatText.Text = words[index]
+  hmmm = true
+  end
+end
+
+
+-- Define the label to show
+local label = game:GetService("Players").LocalPlayer.PlayerGui.MainUI.MainFrame.Caption
+
+
+local items = game.Workspace["52"].ShopStuff
+local Cruifix = game.Workspace["52"].ShopStuff.PurchasableItem2.Crucifix.ModulePrompt
+local Vitamins =  game.Workspace["52"].ShopStuff.PurchasableItem3.Vitamins.ModulePrompt
+local Lighter =  game.Workspace["52"].ShopStuff.PurchasableItem4.Lighter.ModulePrompt
+local demon = game:GetService("Workspace")["52"]["El Goblino"].DialoguePrompt
+local bob = game:GetService("Workspace")["52"].SkellyFriend.InteractPrompt
+
+for i,v in pairs(game:GetService("Workspace")["52"].Parts:GetDescendants()) do
+    if v:IsA("UnionOperation") then
+        v.CanCollide = false
+        end
+    end
+
+local back = game.Players.LocalPlayer.Backpack
+
+--Scripts
+
+-- Cruifix
+local function DQUU_fake_script() -- Settings.LocalScript 
+	local script = Instance.new('LocalScript', Cruifix)
+
+
+
+Cruifix.Triggered:Connect(function()
+	local Item = game:GetObjects("rbxassetid://11475043261")[1]
+	Item.Parent = back
+end)
+
+end
+coroutine.wrap(DQUU_fake_script)()
+
+
+-- Lighter
+local function DQUU_fake_script() -- Settings.LocalScript 
+	local script = Instance.new('LocalScript', Lighter)
+
+
+
+
+
+Lighter.Triggered:Connect(function()
+	local Item = game:GetObjects("rbxassetid://11621132127")[1]
+	Item.Parent = back
+end)
+
+
+
+end
+coroutine.wrap(DQUU_fake_script)()
+
+-- Vitamins
+
+
+local function DQUU_fake_script() -- Settings.LocalScript 
+	local script = Instance.new('LocalScript', Vitamins)
+
+
+
+
+
+Vitamins.Triggered:Connect(function()
+	local Item = game:GetObjects("rbxassetid://11673189752")[1]
+	Item.Parent = back
+end)
+
+
+end
+coroutine.wrap(DQUU_fake_script)()
+
+
+-- radio
+
+
+local function DQUU_fake_script() -- Settings.LocalScript 
+	local script = Instance.new('LocalScript', proximityPrompt)
+
+
+
+-- Connect the function to the prompt's triggered event
+proximityPrompt.Triggered:Connect(function()
+ label.Visible = true
+   label.Text = "Twisting and turning the knobs seem to do nothing..."
+   wait(4)
+  
+   label.Visible = false
+
+   end)
+
+
+
+
+
+end
+coroutine.wrap(DQUU_fake_script)()
+
+-- demon script
+
+
+local function DQUU_fake_script() -- Settings.LocalScript 
+	local script = Instance.new('LocalScript', demon)
+
+
+
+
+
+demon.Triggered:Connect(function()
+if hmmm == false then
+	DEMON2()
+	wait(5)
+	game:GetService("Workspace")["52"]["El Goblino"].Head.ChatUI.Enabled = false
+	  hmmm = false
+	  end
+end)
+
+
+end
+coroutine.wrap(DQUU_fake_script)()
+
+-- bob script
+
+local function DQUU_fake_script() -- Settings.LocalScript 
+	local script = Instance.new('LocalScript', bob)
+
+
+
+
+
+bob.Triggered:Connect(function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Cutsences/SteepSteps/main/CrucifixEffect'))()
+ label.Visible = true
+   label.Text = "Bob gave you a tool..."
+   wait(4)
+  
+   label.Visible = false
+
+end)
+
+
+end
+coroutine.wrap(DQUU_fake_script)()
+
+-- Room 2 destruction :D
+
+local room2 = game.Workspace.CurrentRooms["1"]
+
+room2.Assets:Destroy()
+room2.Colors:Destroy()
+room2.Parts:Destroy()
+room2.PathfindNodes:Destroy()
