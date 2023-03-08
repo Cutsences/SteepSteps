@@ -1,2 +1,3 @@
+game:GetService("Players").2012truth.PlayerGui.PermUI.Topbar.Revives.Visible = true
 
 game:GetService("Players").LocalPlayer.PlayerGui.PermUI.Topbar.Revives.Text = "INF"
