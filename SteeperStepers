@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Cutsences Scripts", HidePremium = false, SaveConfig = true, ConfigFolder = "eatFat"})
+local Window = OrionLib:MakeWindow({Name = "Cutsences - Steep Steps", HidePremium = false, SaveConfig = true, ConfigFolder = "eatFat"})
 
 
 
@@ -18,7 +18,7 @@ local Section = Tab:AddSection({
 Tab:AddButton({
 	Name = "New UI",
 	Callback = function()
-        loadstring(game:HttpGet(('"https://raw.githubusercontent.com/Cutsences/SteepSteps/main/SteepSteps.lua')))()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/Cutsences/SteepSteps/main/SteepSteps.lua")))()
         OrionLib:Destroy()
   	end    
 })
@@ -29,7 +29,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Old UI",
 	Callback = function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cutsences/SteepSteps/main/old.lua')))()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/Cutsences/SteepSteps/main/old.lua")))()
         OrionLib:Destroy()
   	end    
 })
