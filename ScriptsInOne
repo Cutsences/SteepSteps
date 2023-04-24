@@ -1,7 +1,7 @@
 -- thanks for Vynixius, not skidding because its just a loader!111!!
 
 local games = {
-    [{11606818992, 12360480985}] = "https://raw.githubusercontent.com/Cutsences/SteepSteps/main/SteepSteps.lua",
+    [{11606818992, 12360480985, 13210538939}] = "https://raw.githubusercontent.com/Cutsences/SteepSteps/main/SteepSteps.lua",
     [{11939099110}] = "https://raw.githubusercontent.com/Cutsences/SteepSteps/main/SkiRace",
     [{11133411183}] = "https://raw.githubusercontent.com/Cutsences/SteepSteps/main/WalkToSchool",
 }
